@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Product</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="LogIn">login</string>
+    <string name="title_activity_top">TopActivity</string>
+    <string name="ShopSearch">ShopSearch</string>
+    <string name="Friend">Friend</string>
+    <string name="Message">Message</string>
+    <string name="Management">Management</string>
+    <string name="CheckIn">CheckIn</string>
+</resources>
