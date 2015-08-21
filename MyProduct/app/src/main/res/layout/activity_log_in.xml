@@ -25,7 +25,7 @@
                 android:layout_weight="1"
                 />
 
-
+<!--
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -33,7 +33,7 @@
                 android:text="@string/LogIn"
                 android:layout_weight="6"
                 />
-
+-->
             <com.facebook.login.widget.LoginButton
                 android:background="@color/com_facebook_blue"
                 android:id="@+id/login_btn_facebook"
