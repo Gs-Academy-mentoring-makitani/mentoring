@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.makitani.myproduct" >
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
-        <meta-data
-            android:name="com.facebook.android.sdk.Application"
-            android:value="1458294034476273" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
 
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="LogIn"
+            android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
 
-        <activity
-            android:name=".LogInActivity"
-            android:label="facebooksns" >
-        </activity>
-
 
         <activity
-            android:name=".LogInActivity"
-            android:label="@string/app_name" >
+            android:name=".LoginActivity"
+            android:label="facebook" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
