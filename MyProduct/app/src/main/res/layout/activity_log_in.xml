@@ -25,28 +25,28 @@
                 android:layout_weight="1"
                 />
 
-<!--
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/login"
-                android:text="@string/LogIn"
-                android:layout_weight="6"
-                />
+
+                 <!--       <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/login"
+                            android:text="@string/LogIn"
+                            android:layout_weight="6"
+                            />
 -->
-            <com.facebook.login.widget.LoginButton
-                android:background="@color/com_facebook_blue"
-                android:id="@+id/login_btn_facebook"
-                android:layout_width="225dp"
-                android:layout_height="50dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_gravity="center"
-                />
+                        <com.facebook.login.widget.LoginButton
+                            android:background="@color/com_facebook_blue"
+                            android:id="@+id/login_btn_facebook"
+                            android:layout_width="225dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center"
+                            />
 
 
-        </LinearLayout>
+                    </LinearLayout>
 
-    </LinearLayout>
+                </LinearLayout>
 
-</RelativeLayout>
+            </RelativeLayout>
