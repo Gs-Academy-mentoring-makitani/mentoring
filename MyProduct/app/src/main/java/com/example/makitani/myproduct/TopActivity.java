@@ -1,9 +1,13 @@
 package com.example.makitani.myproduct;
 
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -13,6 +17,26 @@ import com.google.android.gms.maps.model.LatLng;
 
 public class TopActivity extends FragmentActivity {
 
+    private Button search;
+    private View.OnClickListener search_ClickListener = new View.OnClickListener(){
+        public void onClick(View v) {
+            search_Click();
+        }
+    };
+
+    private void setViewObject () {
+        search = (Button)findViewById(R.id.search);
+
+    }
+    private void setListner () {
+        search.setOnClickListener(search_ClickListener);
+    }
+
+    private void  search_Click () {
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+            }
+
     private GoogleMap mMap; // Might be null if Google Play services APK is not available.
 
     @Override
@@ -20,6 +44,8 @@ public class TopActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top);
         setUpMapIfNeeded();
+        setViewObject();
+        setListner();
     }
 
     @Override
@@ -62,9 +88,18 @@ public class TopActivity extends FragmentActivity {
      * <p>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
+
+    //現在地の周辺店舗情報を取得し表示
     private void setUpMap() {
-        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(
-                new LatLng(35.671241, 139.765041), 15);
+        LatLng kurashima = new LatLng(35.665931,139.755918);
+        CameraUpdate cu = CameraUpdateFactory.newLatLngZoom(kurashima, 18);
         mMap.moveCamera(cu);
+        /*Marker test =*/
+                mMap.addMarker(new MarkerOptions().position(kurashima).title("くら島").snippet("Recommend number is 10"));
+        //recommend number を店舗ごとに取得し格納する
+        //recommend number が１以上の店舗のみ表示
+        //test.hideInfoWindow();
     }
+
 }
+

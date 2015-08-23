@@ -13,4 +13,6 @@
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_marker_item">MarkerItem</string>
     <string name="title_activity_marker_overlay">MarkerOverlay</string>
+    <string name="title_activity_searcg">SearcgActivity</string>
+    <string name="title_activity_search">activity_search</string>
 </resources>

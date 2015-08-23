@@ -49,6 +49,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = (LoginButton) findViewById(R.id.login_btn_facebook);
         //APIから取得したいユーザー情報の種類を指定し、パーミッションを許可する。
 
+/*        if("id"!=null){
+            Intent intent = new Intent(LoginActivity.this, TopActivity.class);
+            startActivity(intent);
+        }
+*/
         List<String> permissionNeeds = Arrays.asList("user_photos", "email", "user_birthday", "public_profile");
         loginButton.setReadPermissions(permissionNeeds);
 
