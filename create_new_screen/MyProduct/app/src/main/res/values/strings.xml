@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">My Product</string>
+    <string name="facebook_app_id">1458294034476273</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="LogIn">login</string>
+    <string name="title_activity_top">TopActivity</string>
+    <string name="ShopSearch">ShopSearch</string>
+    <string name="Friend">Friend</string>
+    <string name="Message">Message</string>
+    <string name="Management">Management</string>
+    <string name="CheckIn">CheckIn</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_marker_item">MarkerItem</string>
+    <string name="title_activity_marker_overlay">MarkerOverlay</string>
+    <string name="title_activity_searcg">SearcgActivity</string>
+    <string name="title_activity_search">activity_search</string>
+    <string name="title_activity_gps">GPSActivity</string>
+</resources>
