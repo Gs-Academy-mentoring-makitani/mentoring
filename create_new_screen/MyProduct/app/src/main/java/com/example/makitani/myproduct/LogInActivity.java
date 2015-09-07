@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -28,6 +26,7 @@ import java.util.List;
 
 
 public class LoginActivity extends AppCompatActivity {
+    private static final String TAG = "LoginActivity";
     private CallbackManager callbackManager;
     private LoginButton loginButton;
 
@@ -49,11 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = (LoginButton) findViewById(R.id.login_btn_facebook);
         //APIから取得したいユーザー情報の種類を指定し、パーミッションを許可する。
 
-        if("id"!=null){
-            Intent intent = new Intent(LoginActivity.this, TopActivity.class);
-            startActivity(intent);
-        }
-
         List<String> permissionNeeds = Arrays.asList("user_photos", "email", "user_birthday", "public_profile");
         loginButton.setReadPermissions(permissionNeeds);
 
@@ -73,6 +67,18 @@ public class LoginActivity extends AppCompatActivity {
                                     String email = object.getString("email");
                                     String gender = object.getString("gender");
                                     String birthday = object.getString("birthday");
+
+                                    //ログインしていたらidが取得できる -> Top画面に遷移する
+                                    if(!id.isEmpty()){
+                                        //後で使えるようにApplicationに保存しておく
+                                        MyApplication.setsId(id);
+                                        Log.v(TAG, "¥¥ id " + id);
+                                        Log.v(TAG, "¥¥ name " + name);
+                                        Log.v(TAG, "¥¥ email " + email);
+                                        //TopActivityへ移動
+                                        Intent intent = new Intent(LoginActivity.this, TopActivity.class);
+                                        startActivity(intent);
+                                    }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
@@ -83,10 +89,6 @@ public class LoginActivity extends AppCompatActivity {
                 request.setParameters(parameters);
                 request.executeAsync();
 
-                if("id"!=null){
-                    Intent intent = new Intent(LoginActivity.this, TopActivity.class);
-                    startActivity(intent);
-                }
 
 /*
                 loginButton.setOnClickListener(new View.OnClickListener(){
