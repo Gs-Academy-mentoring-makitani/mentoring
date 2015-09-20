@@ -24,12 +24,12 @@ public class Gps03 extends Activity implements LocationListener {
             @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_top);
+        setContentView(R.layout.activity_gps);
 
         // GPSサービス取得
         manager = (LocationManager)getSystemService(LOCATION_SERVICE);
-        //latitude = (TextView)findViewById(R.id.latitude_id);
-        //longitude = (TextView)findViewById(R.id.longitude_id);
+        latitude = (TextView)findViewById(R.id.latitude_id);
+        longitude = (TextView)findViewById(R.id.longitude_id);
         //altitude = (TextView)findViewById(R.id.altitude_id);
         }
 

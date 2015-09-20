@@ -16,4 +16,5 @@
     <string name="title_activity_searcg">SearcgActivity</string>
     <string name="title_activity_search">activity_search</string>
     <string name="title_activity_gps">GPSActivity</string>
+    <string name="検索条件">検索条件</string>
 </resources>

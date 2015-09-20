@@ -28,7 +28,7 @@
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".LogInActivity"
             android:label="facebook" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
